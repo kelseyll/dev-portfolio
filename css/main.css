@@ -1,0 +1,10 @@
+* {
+	margin: 0;
+	padding: 0;
+	webkit-box-sixing: webkit-box-sixing;
+}
+
+h1, h2 {
+	font-family: Karla, sans-serif;
+	color: #757575;
+}

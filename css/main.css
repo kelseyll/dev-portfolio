@@ -60,6 +60,13 @@ li {
 }
 a {
     color: #030EF6;
+    -webkit-transition: color .5s; /* Safari */
+    transition: color 0.5s;
+}
+a:hover {
+    color: #D8D8D8;
+    -webkit-transition: color 0.5s; /* Safari */
+    transition: color 0.5s;
 }
 li a {
     text-decoration: none;

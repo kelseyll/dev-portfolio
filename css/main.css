@@ -1,4 +1,10 @@
-/*Containers ----------------------------------------*/
+/*
+Kelsey Legault
+----$$$-----
+Janurary 2016
+ */
+
+/*Containers ----------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +13,8 @@ html {
     background-color: #EEEEEE;
 }
 body {
-    min-width: 230px;
-    margin: 15px;
+    min-width: 220px;
+    margin: 20px;
     padding: 0;
     webkit-box-sixing: webkit-box-sixing;
     background-color: #fff;
@@ -18,13 +24,19 @@ body {
     text-align: right;
     padding-right: 75px;
     max-width: 350px;
+    -webkit-animation: fade-right 1s;
+    -moz-animation: fade-right 1s;
+    animation: fade-right 1s;
 }
 .container-child__right {
     padding-left: 75px;
     border-left: 1px solid #EEE;
     max-width: 500px;
+    -webkit-animation: fade-right__delay 1.5s;
+    -moz-animation: fade-right__delay 1.5s;
+    animation: fade-right__delay 1.5s;
 }
-/*Typography ----------------------------------------*/
+/*Typography ----------------------------------- */
 h1 {
     margin: 0 0 35px 0;
     font-family: Helvetica, sans-serif;
@@ -58,7 +70,7 @@ b {
     color: #000;
     padding-left: 8px;
 }
-/*Flex Box ----------------------------------------*/
+/*Flex Box ----------------------------------- */
 .flex {
     display: -webkit-flex;
     display: -moz-flex;
@@ -90,7 +102,8 @@ b {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
 }
-/*Media Queries ----------------------------------------*/
+/*Media Queries ----------------------------------- */
+/*(Styles for under 1050px)*/
 @media(max-width:1050px) {
     body {
         padding: 20px;
@@ -107,22 +120,28 @@ b {
         padding-left: 0;
         border: 0;
     }
+    /*.container-child__right {    
+    -webkit-animation: fade-right 1s;
+    -moz-animation: fade-right 1s;
+    animation: fade-right 1s;
+    }*/
     .container-child__left ul,
     .container-child__left h1 {
         text-align: left;
     }
     .container-child__left {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     ul.flex__stick-end {
-        margin-top: 55px;
         align-self: flex-start;
         -webkit-align-self: flex-start;
         -moz-align-self: flex-start;
     }
     .container-child__left h1 {
-        color: #BDBDBD;
-        margin-top: 10px;
+        color: #000;
+        margin-top: 55px;
+        margin-bottom: 25px;
+        font-weight: 500;
     }
     h1 {
         margin: 25px 0;

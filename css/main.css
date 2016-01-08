@@ -1,3 +1,4 @@
+/*Containers ----------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +13,21 @@ body {
     background-color: #fff;
     height: calc(100vh - 40px);
 }
+.column-right,
+.column-left {
+    padding-bottom: 50px;
+}
+.column-left {
+    text-align: right;
+    padding-right: 75px;
+    max-width: 350px;
+}
+.column-right {
+    padding-left: 75px;
+    border-left: 1px solid #EEE;
+    max-width: 500px;
+}
+/*Typography ----------------------------------------*/
 h1, h2 {
     margin: 0 0 55px 0;
     font-family: Helvetica, sans-serif;
@@ -24,6 +40,7 @@ h1, h2 {
     color: black;
 }
 ul, p {
+    font-weight: 500;
     font-size: 18px;
     font-family: 'Work Sans', sans-serif;
     line-height: 36px;
@@ -34,14 +51,16 @@ li {
 }
 a {
     color: #030EF6;
+}
+li a {
     text-decoration: none;
-    font-weight: 500;
 }
 b {
     padding-left: 8px;
     font-size: 20px;
     color: #000;
 }
+/*Flex Box ----------------------------------------*/
 .flex {
     display: -webkit-flex;
     display: -moz-flex;
@@ -72,18 +91,4 @@ b {
     align-self: flex-end;
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
-}
-.column-right,
-.column-left {
-    padding-bottom: 50px;
-}
-.column-left {
-    text-align: right;
-    padding-right: 75px;
-    max-width: 350px;
-}
-.column-right {
-    padding-left: 75px;
-    border-left: 1px solid #EEE;
-    max-width: 500px;
 }

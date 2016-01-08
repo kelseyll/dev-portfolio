@@ -7,6 +7,7 @@ html {
     background-color: #EEEEEE;
 }
 body {
+    min-width: 230px;
     margin: 15px;
     padding: 0;
     webkit-box-sixing: webkit-box-sixing;
@@ -25,10 +26,10 @@ body {
 }
 /*Typography ----------------------------------------*/
 h1 {
-    margin: 0 0 55px 0;
+    margin: 0 0 35px 0;
     font-family: Helvetica, sans-serif;
     color: #D8D8D8;
-    font-size: 52px;
+    font-size: 35px;
     font-weight: 800;
     letter-spacing: 0.45px;
 }
@@ -52,9 +53,10 @@ li a {
     text-decoration: none;
 }
 b {
-    padding-left: 8px;
     font-size: 20px;
+    font-weight: 200;
     color: #000;
+    padding-left: 8px;
 }
 /*Flex Box ----------------------------------------*/
 .flex {
@@ -90,6 +92,10 @@ b {
 }
 /*Media Queries ----------------------------------------*/
 @media(max-width:1050px) {
+    body {
+        padding: 20px;
+        margin: 0;
+    }
     .container {
         flex-direction: column-reverse;
         -webkit-flex-direction: column-reverse;
@@ -97,17 +103,44 @@ b {
     }
     .container-child__left,
     .container-child__right,
-    h1 {
+    h1, p {
         padding-left: 0;
         border: 0;
-        font-size: 20px;
     }
     .container-child__left ul,
     .container-child__left h1 {
         text-align: left;
     }
+    .container-child__left {
+        flex-direction: column-reverse;
+    }
     ul.flex__stick-end {
+        margin-top: 55px;
         align-self: flex-start;
         -webkit-align-self: flex-start;
         -moz-align-self: flex-start;
+    }
+    .container-child__left h1 {
+        color: #BDBDBD;
+        margin-top: 10px;
+    }
+    h1 {
+        margin: 25px 0;
+        font-weight: 600;
+        color: #000;
+    }
+    .container-child__left h1, p, li, a {
+        font-size: 18px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 500;
+    }
+    b {
+        display: none;
+    }
+    li {
+        display: inline;
+    }
+    li a {
+        padding-right: 25px;
+        text-decoration: underline;
     }
